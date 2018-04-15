@@ -1,0 +1,130 @@
+# CVS API
+
+A Java Application which can be used as an API to parse and store a CSV file to a database using JDBC.
+
+## About
+A CSV file is a file in which the data is seperated by commas. Each line will have particular number of Entries, which corresponds to a table.
+In a CSV file the number of entries in all the rows must be same. This program is able to parse a given CSV file, extract the data from 
+it and store it in a DATABASE. The database used in this Application is * **SQLite** which is a local database, stores the data in a disk file
+instead of storing in a server or cloud.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes and learning purpose. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Things you need to install the software
+
+```
+JAVA JDK on you Machine
+An IDE will be helpful. NetBeans is recommended
+SQLite in local Machine
+```
+
+## Deployment
+
+To test the app in any Physical Device or Emulater follow the Installation Process mentioned Below.
+
+
+### Installing and Run
+
+A step by step series of examples that tell you have to get a development env running
+
+1. Download JAVA SE edition from the Link
+[JAVA SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+2. Install using the Steps as mentioned during the installation process
+
+3. Download this Repository by clicking on "Clone or Download Option" and use ZIP
+
+4. Extract the package to a Desired Location 
+
+5. Download an IDE, NetBeans Recommended
+[NetBeans IDE](https://netbeans.org/downloads/)
+
+6. Install the IDE by following the On-Screen instructions.  
+
+7. Create a new Java Application and import my Package in it.
+
+8. To run the application Create an Object of * **CsvApi** class in main Function as shown
+
+```
+class abc{
+  .
+  .
+  .
+  
+  private static void main(String[] args){
+    CsvApi object = new CsvApi();
+  }
+
+}
+```
+With this class object you will be able to call the methods
+
+9. Replace the * **DATABASE_PATH ** variable in the * **SQLiteHelper.java ** class, to a path you want
+to store the Database. It has a Default Value which can be changed
+
+9. Now get a CSV file or use the * **Sample.csv** from the repository or ZIP folder you downloaded
+
+10. Call the methods as shown below. 
+
+```
+class abc{
+  .
+  .
+  .
+  
+  private static void main(String[] args){
+   object.setFilePath("C:\\Users\\Nishant Garg\\Downloads\\Sample.csv");
+  }
+
+}
+```
+* **Note:** The parameter under the * **setFilePath** method is an example. It should be replaced with the actual file Path
+
+11. Now when you run the application, the code will run and you will see a bunch of Outputs like this
+
+```
+run:
+Connection to SQLite has been established.
+The driver name is SQLite JDBC
+A new database has been created.
+CREATE TABLE contentTable( Column1 TEXT, Column2 TEXT, Column3 TEXT, Column4 TEXT);
+INSERT INTO contentTable VALUES ( "GroupName", "Groupcode ", "GroupOwner", "GroupCategoryID " );
+Opened database successfully
+Records created successfully
+INSERT INTO contentTable VALUES ( "System Administrators", "sysadmin", "13456", "100" );
+Opened database successfully
+Records created successfully
+INSERT INTO contentTable VALUES ( "Independence High Teachers", "HS Teachers", "123", "101" );
+Opened database successfully
+Records created successfully
+INSERT INTO contentTable VALUES ( "John Glenn Middle Teachers", "MS Teachers", "13458", "102" );
+Opened database successfully
+Records created successfully
+
+BUILD SUCCESSFUL (total time: 3 seconds)
+
+```
+All these calls are actually feed-backs when executing the programs. These are from * **Sample.csv** File.
+
+
+
+## Built With
+
+* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) - JAVA SE
+* [SQLite](https://www.sqlite.org/download.html)- Back End Database
+
+## Version
+
+Latest Version: 1
+## Authors
+
+* **Nishant Garg**  - [Nishant Garg](https://github.com/GargNishant)
+
+
+## Acknowledgments
+
+* Official Documentation 
