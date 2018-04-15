@@ -5,8 +5,22 @@ A Java Application which can be used as an API to parse and store a CSV file to 
 ## About
 A CSV file is a file in which the data is seperated by commas. Each line will have particular number of Entries, which corresponds to a table.
 In a CSV file the number of entries in all the rows must be same. This program is able to parse a given CSV file, extract the data from 
-it and store it in a DATABASE. The database used in this Application is **SQLite** which is a local database, stores the data in a disk file
-instead of storing in a server or cloud.
+it and store it in a DATABASE. The database used in this Application is **SQLite** which is a local database, stores the data in a disk file instead of storing in a server or cloud.
+
+## How It Works
+1. The user have to first import the packages and has to make sure that both **csvApi.java** and **SQLiteHelper.java** are available.
+
+2. When the user calls **setFilePath()** method, The API collects the path of file from Parameter and Tries to open the file to read it
+
+3. If the file is present then The API reads it line by line and gets various information like **Number of Columns**,**Number of values**, seperate each value by commas, etc.
+
+4. Then API tries to connect to the database. This is just to check wether there are some errors or not.
+
+5. The next thing is to create SQL Queries which should be executed in order like **Create Database**, **Create Table**, **Insert the Values**. All these are acheived by the methods in the **csvApi.java**.
+
+6. After the raw SQL Queries are created, then the Control transfers to **SQLiteHelper.java** class. This class is resposible with the management of database, executing various raw Queries.
+
+7. By executing different types of SQL Queries in **SQLiteHelper.java**, we create, and Fill the tables and databases.
 
 ## Getting Started
 
