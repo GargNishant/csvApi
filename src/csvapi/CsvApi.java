@@ -299,9 +299,9 @@ public class CsvApi {
 
     }
 
-    public static void main(String[] args) throws IOException {
+    /*public static void main(String[] args) throws IOException {
         CsvApi obj = new CsvApi();
         obj.setFilePath("C:\\Users\\Nishant Garg\\Downloads\\Sample.csv");
         // TODO code application logic here
-    }
+    }*/
 }
