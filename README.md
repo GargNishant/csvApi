@@ -5,7 +5,7 @@ A Java Application which can be used as an API to parse and store a CSV file to 
 ## About
 A CSV file is a file in which the data is seperated by commas. Each line will have particular number of Entries, which corresponds to a table.
 In a CSV file the number of entries in all the rows must be same. This program is able to parse a given CSV file, extract the data from 
-it and store it in a DATABASE. The database used in this Application is * **SQLite** which is a local database, stores the data in a disk file
+it and store it in a DATABASE. The database used in this Application is **SQLite** which is a local database, stores the data in a disk file
 instead of storing in a server or cloud.
 
 ## Getting Started
@@ -66,7 +66,7 @@ With this class object you will be able to call the methods
 9. Replace the **DATBASE_PATH** variable in the  **SQLiteHelper.java** class, to a path you want
 to store the Database. It has a Default Value which can be changed
 
-9. Now get a CSV file or use the * **Sample.csv** from the repository or ZIP folder you downloaded
+9. Now get a CSV file or use the **Sample.csv** from the repository or ZIP folder you downloaded
 
 10. Call the methods as shown below. 
 
@@ -108,9 +108,26 @@ Records created successfully
 BUILD SUCCESSFUL (total time: 3 seconds)
 
 ```
-All these calls are actually feed-backs when executing the programs. These are from * **Sample.csv** File.
+All these calls are actually feed-backs when executing the programs. These are from **Sample.csv** File.
 
+## Understanding the API
+The CVS API uses a bunch of methods and Variables to Parse the data from the correct format and stores it in the Database. The backend Server being used is **SQLite** Database which is a complete lcal server, requires no installation. Just download, set the Enviromental Varaible and you will be able to perform SQL Queries.
 
+As CVS files does not have some kind of standered format, Applications uses different Approaches. In this API, and during it devopment process we are **assuming** few Things. These are:
+ 
+ ### Assumptions
+ 
+ 1. The programmer which is going to use this API has no IDEA about the number of Coloumns, schema of the table, Data Types of the Columns.
+ 
+ 2. It is the responsibility of the API to assume the Columns, their Datatypes, Create Table, Insert Values into them and Manage them
+ 
+ 3. A valid CSV file for this API will not have any kind of null values. The number of values in a Row will be constant throughout the file.
+ 
+ 4. Each row will end with CRLF or End of Line Character or simple "\n" character. Each Value in a Row will be seperated by commas only
+ 
+ 5. The API itself is not responsible to show the contents in the Database. The programmer must use different way to check. No SELECT queries will run on API
+ 
+ 6. The API can only perform selected SQL Queries. One for creating Database, then Create Table and last one will be to Insert Values into the Database.
 
 ## Built With
 
