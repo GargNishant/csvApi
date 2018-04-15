@@ -139,7 +139,7 @@ As CVS files does not have some kind of standered format, Applications uses diff
 Latest Version: 1
 ## Authors
 
-* **Nishant Garg**  - [Nishant Garg](https://github.com/GargNishant)
+* [**Nishant Garg**](https://github.com/GargNishant)
 
 
 ## Acknowledgments
