@@ -1,4 +1,4 @@
-# CVS API
+# CSV API
 
 A Java Application which can be used as an API to parse and store a CSV file to a database using JDBC.
 
@@ -29,7 +29,7 @@ To test the app in any Physical Device or Emulater follow the Installation Proce
 
 ### Installing and Run
 
-A step by step series of examples that tell you have to get a development env running
+A step by step series of examples that tell you have to get a development enviroment running
 
 1. Download JAVA SE edition from the Link
 [JAVA SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
