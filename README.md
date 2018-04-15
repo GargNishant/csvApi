@@ -64,7 +64,8 @@ class abc{
 With this class object you will be able to call the methods
 
 9. Replace the **DATBASE_PATH** variable in the  **SQLiteHelper.java** class, to a path you want
-to store the Database. It has a Default Value which can be changed
+to store the Database. It has a Default Value which can be changed. A Database file is included in the Git Repo
+named as **database.db**.
 
 9. Now get a CSV file or use the **Sample.csv** from the repository or ZIP folder you downloaded
 
