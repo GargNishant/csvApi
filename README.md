@@ -47,7 +47,7 @@ A step by step series of examples that tell you have to get a development env ru
 
 7. Create a new Java Application and import my Package in it.
 
-8. To run the application Create an Object of * **CsvApi** class in main Function as shown
+8. To run the application Create an Object of  **CsvApi** class in main Function as shown
 
 ```
 class abc{
@@ -63,7 +63,7 @@ class abc{
 ```
 With this class object you will be able to call the methods
 
-9. Replace the * **DATABASE_PATH ** variable in the * **SQLiteHelper.java ** class, to a path you want
+9. Replace the **DATBASE_PATH** variable in the  **SQLiteHelper.java** class, to a path you want
 to store the Database. It has a Default Value which can be changed
 
 9. Now get a CSV file or use the * **Sample.csv** from the repository or ZIP folder you downloaded
